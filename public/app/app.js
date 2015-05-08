@@ -21,7 +21,12 @@ app.config(function ($routeProvider) {
 
 app.constant('ngAuthSettings', {
     apiServiceBaseUri:
+<<<<<<< HEAD
        'http://localhost:3000/',
+=======
+       'http://localhost:26173/',
+    //'http://ayevendanieln:2617/', //IIS
+>>>>>>> d40158de68831b14ac765f9f4fc373632f20ba4d
     clientId: 'ngAuthApp'
 });
 

@@ -7,6 +7,7 @@ app.controller('displayController', ['$scope', '$location','$http', '$templateCa
     $scope.testFun = $rootScope.testRoot;
     $scope.testProduct = [];
     
+<<<<<<< HEAD
     $scope.searchProduct = function(txt){
       authService.searchGoogle(txt).then(function (results) {
             $scope.testProduct = results.data;
@@ -14,5 +15,7 @@ app.controller('displayController', ['$scope', '$location','$http', '$templateCa
             $location.path('/display');
         });
     };
+=======
+>>>>>>> d40158de68831b14ac765f9f4fc373632f20ba4d
    
 }]);
