@@ -1,12 +1,6 @@
 ﻿'use strict';
 app.controller('homeController', ['$scope', '$location','$http', '$templateCache', 'authService','$rootScope', function ($scope, $location,$http ,$templateCache,authService,$rootScope) {
-
-
-<<<<<<< HEAD
     $scope.searchtext = 'nexus';
-=======
-    $scope.searchtext = 'iphone';
->>>>>>> d40158de68831b14ac765f9f4fc373632f20ba4d
     $scope.message ='';
     $scope.test = [];
     $scope.testProduct = [];
