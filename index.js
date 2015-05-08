@@ -1,8 +1,11 @@
+var express =require('express');
       var app = require('express')();
       var http = require('http');
       var https = require('https');
       var server = http.Server(app);
       var io = require('socket.io')(server);
+      var fs = require('fs');
+      var path = require('path');
 
       app.get('/', function(req, res){
         res.sendFile(__dirname + '/index.html');
@@ -18,7 +21,7 @@
         var id = parseInt(req.params.id);
         var searchText = 'iphone';
 
-        res.sendFile(__dirname + '/mada.html');
+        res.sendFile(__dirname + '/search.html');
       });
 
       app.get('/getdata', function (req, res) {
@@ -152,6 +155,44 @@
 
       });
 
+
       server.listen(3000, function(){
         console.log('listening on *:3000');
       });
+app.use(express.static('public'));
+
+
+
+     // http.createServer(function (request, response) {
+/*
+server.listen(3000, function(request, response) {
+
+       console.log('request starting...');
+    console.log(url);
+  
+  var filePath = '.' + request.url;
+  if (filePath == './')
+    filePath = './index.htm';
+  
+  path.exists(filePath, function(exists) {
+  
+    if (exists) {
+      fs.readFile(filePath, function(error, content) {
+        if (error) {
+          response.writeHead(500);
+          response.end();
+        }
+        else {
+          response.writeHead(200, { 'Content-Type': 'text/html' });
+          response.end(content, 'utf-8');
+        }
+      });
+    }
+    else {
+      response.writeHead(404);
+      response.end();
+    }
+  });
+  
+}).listen(3000);
+console.log('Server running at http://127.0.0.1:3000/');*/
